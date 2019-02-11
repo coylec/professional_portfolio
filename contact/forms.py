@@ -1,0 +1,11 @@
+from django import forms
+
+
+class ContactForm(forms.Form):
+    contact_email = forms.EmailField(required=True)
+    subject = forms.CharField(required=True)
+    message = forms.CharField(
+        label='Message',
+        required=True,
+        widget=forms.Textarea
+    )

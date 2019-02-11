@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>Get in touch by sending me a message via the form below.</p>
+                <form role="form" action="" method="post">
+                    <legend>Send Me A Message</legend>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
