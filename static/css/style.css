@@ -4,15 +4,14 @@ body {
 }
 
 .bg {
-    background: url('/static/images/geometric-bg-img-compressed.jpg') no-repeat;
-
-
+    background: url('/static/images/geometric-bg-img8-comp.jpg') no-repeat;
+    border-radius: 0;
 }
 .nav-style {
     background-color: #272727;
 }
 .about {
-    background-image: linear-gradient( to bottom right, #272264, #2E80B8);
+    background-image: linear-gradient( to bottom right, #524D83, #4B96C7);
     margin-top: 25px;
     padding-top: 25px;
 }
