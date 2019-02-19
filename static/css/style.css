@@ -131,3 +131,24 @@ p {
     margin-top: 75px;
     padding-bottom: 30px;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+    .code-images {
+        padding-top: 150px;
+    }
+    .py-django {
+        padding-top: 75px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .code-images {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .py-django {
+        padding-top: 5px;
+        padding-bottom: 25px;
+    }
+}
