@@ -13,15 +13,17 @@
             </p>
         </div>
         </section>
+
         <section class="portfolio" id="portfolio">
             <div class="container">
                 <h2 class="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
                 <hr class="star-dark mb-5">
 
-                {% for job in jobs.all %}
-                    <div class="row portfolio-row">
+                <div class="row portfolio-row">
+
+                    {% for job in jobs.all %}
                         <div class="col-md-6 col-lg-4">
-                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-{{ forloop.counter }}">
                                 <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                                     <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
                                         <i class="fas fa-search-plus fa-3x"></i>
@@ -31,9 +33,11 @@
                             </a>
                             <h3 class="text-center text-secondary">{{ job.title }}</h3>
                         </div>
-                    </div>
-                    <!-- Portfolio Modal 1 -->
-                    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
+                    {% endfor %}
+                </div>
+                <!-- Portfolio Modal -->
+                {% for job in jobs.all %}
+                    <div class="portfolio-modal mfp-hide" id="portfolio-modal-{{ forloop.counter }}">
                         <div class="portfolio-modal-dialog bg-white">
                             <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
                                 <i class="fa fa-3x fa-times"></i>
@@ -45,7 +49,7 @@
                                         <hr class="star-dark mb-5">
                                         <img class="img-fluid mb-5" src="{{ job.image.url }}" alt="Image of website">
                                         <p class="mb-5">{{ job.summary }}</p>
-                                        <a target="_blank" class="btn btn-primary btn-lg rounded-pill" href="https://www.mrcrumb.ie"><i class="fa fa-close"></i>Visit Website</a>
+                                        <a target="_blank" class="btn btn-primary btn-lg rounded-pill" href="{{ job.web_address }}"><i class="fa fa-close"></i>Visit Website</a>
                                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                                             <i class="fa fa-close"></i>Close Project</a>
                                     </div>
@@ -53,10 +57,10 @@
                             </div>
                         </div>
                     </div>
-
                 {% endfor %}
             </div>
         </section>
+
         <section class="about" id="about">
             <div class="container-fluid">
                 <div class="row text-center">
