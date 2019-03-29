@@ -8,6 +8,7 @@ body {
 
 .bg {
     background: url('/static/images/geometric-bg-img8-comp.jpg') no-repeat;
+    background-size: cover;
     border-radius: 0;
 }
 .nav-style {
