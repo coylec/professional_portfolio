@@ -15,9 +15,11 @@ body {
     background-color: #272727;
 }
 .about {
-    background-image: linear-gradient( to bottom right, #524D83, #4B96C7);
+    /*background-image: linear-gradient( to bottom right, #524D83, #4B96C7);*/
+    background-image: radial-gradient(#579AC7, #507AAC, #524D83);
     margin-top: 25px;
-    padding-top: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .footer {
     position: absolute;
@@ -34,6 +36,9 @@ h1, h2, h3 {
 p {
     font-family: 'Roboto', Verdana, Arial, sans-serif;
 }
+.btn-design {
+    color: #1A456B;
+}
 /* Back to top button */
 .back-to-top {
     position: fixed;
@@ -49,7 +54,8 @@ p {
 
 /* Portfolio Section */
 .portfolio {
-  margin-bottom: -15px;
+    margin-bottom: -15px;
+    padding: 30px 0;
 }
 .portfolio-row {
     padding-bottom: 20px;
