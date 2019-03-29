@@ -152,3 +152,9 @@ p {
         padding-bottom: 25px;
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .btn-job-view {
+        margin-top: 5px;
+    }
+}
